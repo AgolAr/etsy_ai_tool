@@ -1,0 +1,103 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Fintech SaaS Design System - Light Mode */
+    --background: 240 7% 96%;        /* #F4F4F6 */
+    --foreground: 0 0% 7%;           /* #111111 */
+    
+    --card: 0 0% 100%;               /* #FFFFFF */
+    --card-foreground: 0 0% 7%;      /* #111111 */
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+    
+    --primary: 252 100% 71%;         /* #8A6CFF - Purple */
+    --primary-foreground: 0 0% 100%; /* White */
+    
+    --secondary: 74 100% 62%;        /* #D6FF3F - Lime Green */
+    --secondary-foreground: 0 0% 7%; /* #111111 */
+    
+    --muted: 240 7% 77%;             /* #C0C0C8 */
+    --muted-foreground: 0 0% 35%;
+    
+    --accent: 165 50% 88%;           /* #D0F0E8 - Mint */
+    --accent-foreground: 0 0% 7%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 255 100% 94%;          /* #E8E0FF - Light Lavender */
+    --input: 255 100% 94%;
+    --ring: 252 100% 71%;            /* #8A6CFF */
+    
+    --radius: 1rem;                  /* 16px */
+  }
+  
+  .dark {
+    /* Fintech SaaS Design System - Dark Mode */
+    --background: 0 0% 7%;           /* #111111 */
+    --foreground: 240 7% 96%;        /* #F4F4F6 */
+    
+    --card: 240 5% 12%;              /* Darker Card */
+    --card-foreground: 240 7% 96%;
+    
+    --popover: 240 5% 12%;
+    --popover-foreground: 240 7% 96%;
+    
+    --primary: 252 100% 71%;         /* #8A6CFF */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 74 100% 62%;        /* #D6FF3F */
+    --secondary-foreground: 0 0% 7%;
+    
+    --muted: 240 5% 20%;
+    --muted-foreground: 240 5% 65%;
+    
+    --accent: 165 50% 20%;
+    --accent-foreground: 165 50% 88%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 240 5% 20%;
+    --input: 240 5% 20%;
+    --ring: 252 100% 71%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    overflow-x: clip;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Manrope', 'Inter', sans-serif;
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .fintech-card {
+    @apply bg-card border border-border rounded-[20px] shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300;
+  }
+  
+  .fintech-button-primary {
+    @apply bg-primary text-white hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(138,108,255,0.4)] transition-all duration-300 rounded-xl font-semibold;
+  }
+  
+  .fintech-button-secondary {
+    @apply bg-secondary text-foreground hover:bg-secondary/90 hover:shadow-[0_0_20px_rgba(214,255,63,0.4)] transition-all duration-300 rounded-xl font-semibold;
+  }
+}

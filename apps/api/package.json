@@ -1,0 +1,28 @@
+{
+  "name": "api",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node src/main.js",
+    "start": "node src/main.js",
+    "lint": "eslint . --quiet"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.3.0",
+    "cors": "^2.8.5",
+    "docx": "^8.5.0",
+    "dotenv": "^16.4.7",
+    "express": "^5.0.1",
+    "helmet": "^8.0.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^1.1.1",
+    "pocketbase": "^0.26.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "^8.57.0",
+    "eslint": "^8.57.1",
+    "globals": "^15.14.0"
+  }
+}
